@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
 *,
 *::before,
 *::after {
@@ -40,4 +42,119 @@ canvas {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+:root {
+  --ff-normal: "Poppins", sans-serif;
+
+  --fw-thin: 200;
+  --fw-normal: 400;
+  --fw-bold: 600;
+
+  --fs-m: 0.8125rem;
+  --fs-l: 0.9375rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+
+  --color-base-800: hsl(0, 0%, 98%);
+  --color-base-900: hsl(0, 0%, 100%);
+
+  --color-primary-300: hsl(234, 12%, 34%);
+  --color-primary-600: hsl(229, 6%, 66%);
+
+  --color-drop-shadow: hsl(213, 45%, 67%, 0.5);
+
+  --color-accent-supervisor: hsl(180, 62%, 55%);
+  --color-accent-team-builder: hsl(0, 78%, 62%);
+  --color-accent-karma: hsl(34, 97%, 64%);
+  --color-accent-calculator: hsl(212, 86%, 64%);
+}
+
+body {
+  font-family: var(--ff-normal);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-m);
+  background-color: var(--color-base-800);
+
+  color: var(--color-primary-600);
+  padding: 5.3125rem 2rem 4.875rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  margin-bottom: 1.5rem;
+  color: var(--color-primary-300);
+}
+
+h1 span {
+  display: block;
+}
+
+h1 span:first-child {
+  font-weight: var(--fw-thin);
+}
+
+p {
+  font-size: var(--fs-l);
+  line-height: 1.67;
+}
+
+main {
+  margin-top: 4.75rem;
+  display: grid;
+  gap: 1.4375rem;
+}
+
+section {
+  position: relative;
+  background-color: var(--color-base-900);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.9375rem 1.875rem -0.6875rem var(--color-drop-shadow);
+  padding: 1.75rem;
+  text-align: left;
+  overflow: hidden;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 0.25rem;
+}
+
+section[data-type="supervisor"]::before {
+  background-color: var(--color-accent-supervisor);
+}
+
+section[data-type="team-builder"]::before {
+  background-color: var(--color-accent-team-builder);
+}
+
+section[data-type="karma"]::before {
+  background-color: var(--color-accent-karma);
+}
+
+section[data-type="calculator"]::before {
+  background-color: var(--color-accent-calculator);
+}
+
+section h2 {
+  color: var(--color-primary-300);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+}
+
+section p {
+  line-height: 1.77;
+}
+
+section img {
+  margin-left: auto;
+  margin-top: 2rem;
+  width: 3.56rem;
+  aspect-ratio: 1/1;
 }
