@@ -101,13 +101,13 @@ p {
   line-height: 1.67;
 }
 
-main {
+ul {
   margin-top: 4.75rem;
   display: grid;
   gap: 1.4375rem;
 }
 
-section {
+li {
   position: relative;
   background-color: var(--color-base-900);
   border-radius: 0.5rem;
@@ -117,7 +117,7 @@ section {
   overflow: hidden;
 }
 
-section::before {
+li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -126,11 +126,11 @@ section::before {
   height: 0.25rem;
 }
 
-section[data-type="supervisor"]::before {
+li[data-type="supervisor"]::before {
   background-color: var(--color-accent-supervisor);
 }
 
-section[data-type="team-builder"]::before {
+li[data-type="team-builder"]::before {
   background-color: var(--color-accent-team-builder);
 }
 
@@ -138,21 +138,21 @@ section[data-type="karma"]::before {
   background-color: var(--color-accent-karma);
 }
 
-section[data-type="calculator"]::before {
+li[data-type="calculator"]::before {
   background-color: var(--color-accent-calculator);
 }
 
-section h2 {
+li h2 {
   color: var(--color-primary-300);
   font-size: var(--fs-xl);
   font-weight: var(--fw-bold);
 }
 
-section p {
+li p {
   line-height: 1.77;
 }
 
-section img {
+li img {
   margin-left: auto;
   margin-top: 2rem;
   width: 3.56rem;
